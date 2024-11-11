@@ -34,3 +34,16 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  build2:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: first
+        run: echo hello, this is demo
+  build3:
+    runs-on: ubuntu-latest
+    needs: build2
+    steps:
+      - name: first
+        run: echo hello, this is demo 2
+
